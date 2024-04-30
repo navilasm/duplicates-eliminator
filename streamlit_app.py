@@ -19,6 +19,7 @@ with st.sidebar:
             uploaded_file.seek(0)
             df = pd.read_csv(uploaded_file, low_memory=False)
         df['filename'] = uploaded_file.name
+        df['filename'] = df['filename'].str.slice(0, 31)
         dfs.append(df)
 
 def dfs_tabs(df_list, sheet_list, file_name):
