@@ -75,7 +75,7 @@ if dfs:
                     final_data_df[group_name] = group_df
                 for i in sheets:
                     final_data_dfs.append(final_data_df[i])
-                df_xlsx = dfs_tabs(final_data_dfs, sheets, 'multi-test.xlsx')
+                df_xlsx = dfs_tabs(final_data_dfs, sheets, 'multitest.xlsx')
                 st.download_button(label='Download Final Data', data=df_xlsx, file_name='final_result.xlsx', type="primary")
 
         elif len(duplicates)>0 and options=="Select from one of the files":
@@ -109,7 +109,7 @@ if dfs:
                     final_data_df[group_name] = group_df
                 for i in sheets:
                     final_data_dfs.append(final_data_df[i])
-                df_xlsx = dfs_tabs(final_data_dfs, sheets, 'multi-test.xlsx')
+                df_xlsx = dfs_tabs(final_data_dfs, sheets, 'multitest.xlsx')
                 st.download_button(label='Download Final Data', data=df_xlsx, file_name='final_result.xlsx', type="primary")
 
         elif len(duplicates)>0 and options=="Keep one, eliminate other duplicates":
@@ -134,5 +134,5 @@ if dfs:
                     final_data_df[group_name] = group_df
                 for i in sheets:
                     final_data_dfs.append(final_data_df[i])
-                df_xlsx = dfs_tabs(final_data_dfs, sheets, 'multi-test.xlsx')
+                df_xlsx = dfs_tabs(final_data_dfs, sheets, 'multitest.xlsx')
                 st.download_button(label='Download Final Data', data=df_xlsx, file_name='final_result.xlsx', type="primary")               
